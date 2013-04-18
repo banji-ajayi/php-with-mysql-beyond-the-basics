@@ -1,8 +1,9 @@
 <?php
+
 require_once("../includes/database.php");
 require_once("../includes/user.php");
 
-$record = User::find_by_id(1);
+$user = User::find_by_id(1);
 echo $user->full_name();
 
 echo "<hr />";
@@ -12,5 +13,4 @@ echo "<hr />";
 //   echo "User: ". $user['username'] ."<br />";
 //   echo "Name: ". $user['first_name'] . " " . $user['last_name'] ."<br /><br />";
 // }
-
 ?>
