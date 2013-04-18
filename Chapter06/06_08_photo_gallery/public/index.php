@@ -12,7 +12,7 @@ echo "<hr />";
 
 $users = $dao_user->find_all();
 foreach($users as $user) {
-  echo "User: ". $user->username ."<br />";
+  echo "User: ". $user->getUsername() ."<br />";
   echo "Name: ". $user->full_name() ."<br /><br />";
 }
 

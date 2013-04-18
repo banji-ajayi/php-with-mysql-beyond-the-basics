@@ -35,19 +35,22 @@ class DAOUser {
         $object = new User();
 
         // Simple, long-form approach:
-        // $object->id 				= $record['id'];
-        // $object->username 	= $record['username'];
-        // $object->password 	= $record['password'];
-        // $object->first_name = $record['first_name'];
-        // $object->last_name 	= $record['last_name'];
+        $object->setId($record['id']);
+        $object->setUsername($record['username']);
+        $object->setPassword($record['password']);
+        $object->setFirst_name($record['first_name']);
+        $object->setLast_name($record['last_name']);
+
         // More dynamic, short-form approach:
-        foreach ($record as $attribute => $value) {
-            if ($object->has_attribute($attribute)) {
-                $object->$attribute = $value;
-            }
-        }
+        //        foreach ($record as $attribute => $value) {
+        //            if ($object->has_attribute($attribute)) {
+        //                $object->$attribute = $value;
+        //            }
+        //        }
+
         return $object;
     }
+
 }
 
 ?>

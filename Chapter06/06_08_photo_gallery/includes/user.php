@@ -2,11 +2,11 @@
 
 class User {
 
-    public $id;
-    public $username;
-    public $password;
-    public $first_name;
-    public $last_name;
+    private $id;
+    private $username;
+    private $password;
+    private $first_name;
+    private $last_name;
 
     public function full_name() {
         if (isset($this->first_name) && isset($this->last_name)) {
@@ -16,14 +16,14 @@ class User {
         }
     }
 
-    public function has_attribute($attribute) {
-        // get_object_vars returns an associative array with all attributes 
-        // (incl. private ones!) as the keys and their current values as the value
-        $object_vars = get_object_vars($this);
-        // We don't care about the value, we just want to know if the key exists
-        // Will return true or false
-        return array_key_exists($attribute, $object_vars);
-    }
+//    public function has_attribute($attribute) {
+//        // get_object_vars returns an associative array with all attributes 
+//        // (incl. private ones!) as the keys and their current values as the value
+//        $object_vars = get_object_vars($this);
+//        // We don't care about the value, we just want to know if the key exists
+//        // Will return true or false
+//        return array_key_exists($attribute, $object_vars);
+//    }
 
     public function getId() {
         return $this->id;
